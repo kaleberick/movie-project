@@ -242,7 +242,75 @@ nrow(data)
 head(data)
 
 
+# Now that we've pulled all of the data, we still need to do a bit of processing to make sure the data is good for our model.
 
+
+# First, we need to adjust the domestic earnings for inflation. We can do this in a general way. 
+# Box Office Mojo gives the average ticket price for each year. 
+# By dividing the earnings by the ticket price, we get an estimate for the number of tickets sold. 
+# We then multiply that number of tickets sold by the current average ticket price for 2019. 
+# This gives a decent estimate for domestic earnings adjusted for inflation. 
+
+
+# First, we create a new column that holds the average ticket price for each year. 
+data$adjust <- 0
+data$adjust[data$year == 1981] = 2.78
+data$adjust[data$year == 1982] = 2.94
+data$adjust[data$year == 1983] = 3.15
+data$adjust[data$year == 1984] = 3.36
+data$adjust[data$year == 1985] = 3.55
+data$adjust[data$year == 1986] = 3.71
+data$adjust[data$year == 1987] = 3.91
+data$adjust[data$year == 1988] = 4.11
+data$adjust[data$year == 1989] = 3.97
+data$adjust[data$year == 1990] = 4.23
+data$adjust[data$year == 1991] = 4.21
+data$adjust[data$year == 1992] = 4.15
+data$adjust[data$year == 1993] = 4.14
+data$adjust[data$year == 1994] = 4.18
+data$adjust[data$year == 1995] = 4.35
+data$adjust[data$year == 1996] = 4.42
+data$adjust[data$year == 1997] = 4.59
+data$adjust[data$year == 1998] = 4.69
+data$adjust[data$year == 1999] = 5.08
+data$adjust[data$year == 2000] = 5.39
+data$adjust[data$year == 2001] = 5.66
+data$adjust[data$year == 2002] = 5.81
+data$adjust[data$year == 2003] = 6.03
+data$adjust[data$year == 2004] = 6.21
+data$adjust[data$year == 2005] = 6.41
+data$adjust[data$year == 2006] = 6.55
+data$adjust[data$year == 2007] = 6.88
+data$adjust[data$year == 2008] = 7.18
+data$adjust[data$year == 2009] = 7.5
+data$adjust[data$year == 2010] = 7.89
+data$adjust[data$year == 2011] = 7.93
+data$adjust[data$year == 2012] = 7.96
+data$adjust[data$year == 2013] = 8.13
+data$adjust[data$year == 2014] = 8.17
+data$adjust[data$year == 2015] = 8.43
+data$adjust[data$year == 2016] = 8.65
+data$adjust[data$year == 2017] = 8.97
+data$adjust[data$year == 2018] = 9.11
+data$adjust[data$year == 2019] = 9.01
+##############
+
+
+# Then we use that to find the tickets sold and multiply it by $9.01 to get the adjusted earnings. 
+data$tickets_sold <- data$domestic_gross / data$adjust
+data$gross_adj <- data$tickets_sold * 9.01
+
+
+# Rather than using the month as a feature in the model, we will do some feature engineering to look at the 
+#     season in which the movie was released. 
+# This code creates a new column called season, which is populated based on the release month. 
+data$season <- NULL
+data$season[data$month == 'March' | data$month == 'April' | data$month == 'May'] = 'Spring'
+data$season[data$month == 'June' | data$month == 'July' | data$month == 'August'] = 'Summer'
+data$season[data$month == 'September' | data$month == 'October' | data$month == 'November'] = 'Fall'
+data$season[data$month == 'December' | data$month == 'January' | data$month == 'February'] = 'Winter'
+
+# And with that, our data is ready to go!
 
 
 
