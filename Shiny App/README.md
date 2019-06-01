@@ -2,9 +2,9 @@
 
 There are two R files here. The first and most relevant is called "app.R". 
 
-This file contains all of the code necessary to create the Shiny App, which can be found [here](https://kalebe.shinyapps.io/Box-Office-Predictions/)
+This file contains all of the code necessary to create the Shiny App, which can be found [here](https://kalebe.shinyapps.io/Box-Office-Predictions/).
 You will need to install the shiny package on your computer in order for this script to work. 
-You can do so with the following code in R: install.packages("shiny")
+You can do so with the following code in R: install.packages("shiny").
 
 Using this R file, you can create your own local version of this Shiny App (and even make your own adjustments or changes). 
 
@@ -20,5 +20,5 @@ Alternatively, if you are using RStudio, there will be a button in the top-right
 The second file is called "shiny permissions.R". This app gives simple instructions for how to deploy your own version of this app to the cloud using Shiny. 
 You will need to create your own Shiny account, which can be done [here](https://shinyapps.io). 
 Once you create an account, you will need your account name, your account token, and the secret token. 
-You will also need to install the rsconnect package, which can be done with the following code: install.packages("rsconnect")
+You will also need to install the rsconnect package, which can be done with the following code: install.packages("rsconnect").
 The comments in the script contain further insctructions for how to complete this. 
