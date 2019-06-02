@@ -12,11 +12,6 @@ final_list <- read.csv('movie_dataset.csv',header=TRUE,stringsAsFactors = TRUE)
 
 # Domestic Earnings
 
-hist(final_list$gross_adj,xaxt = 'n',col=matlab.like(8),xlab='Adjusted Domestic Earnings',main='Domestic Box Office')
-axis(1, at=c(0,2e8,4e8,6e8,8e8,1e9),labels=c('$0','$200 mil','$400 mil','$600 mil','$800 mil','$1 billion'))
-# Note the right-skewed nature. We're going to have to transform the data. 
-
-
 # Let's look at the average earnings by year
 present3 <- final_list[!is.na(final_list$domestic_gross),]
 theater <- summarise(group_by(present3, year), Order.Amount=mean(domestic_gross))
@@ -36,7 +31,11 @@ barplot(f,names.arg=g,col=rainbow(10),main='Adjusted Domestic Earnings by Year',
 
 # This now looks much better and easier to work with. 
 
-# The histogram of the Log transformation also looks beautiful
+hist(final_list$gross_adj,xaxt = 'n',col=matlab.like(8),xlab='Adjusted Domestic Earnings',main='Domestic Box Office')
+axis(1, at=c(0,2e8,4e8,6e8,8e8,1e9),labels=c('$0','$200 mil','$400 mil','$600 mil','$800 mil','$1 billion'))
+# Note the right-skewed nature. We're going to have to transform the data. 
+
+# The histogram of the Log transformation looks much better.
 hist(log(final_list$gross_adj),col=matlab.like(9),xlab='Log Domestic Earnings',main='Log Transform Domestic Box Office')
 
 
