@@ -18,8 +18,8 @@ The second function creates the actual calculations used to return a prediction 
 
 The third function at the very bottom of the file is used to deploy the app locally. 
 Run all of the code at once with this function at the bottom and it will automatically bring up a screen displaying the local app on your computer. 
-Once you have run all of the code, you can just run this third function (shinyApp(ui, server)) to display a local version of the app. 
-Alternatively, if you are using RStudio, there will be a button in the top-right corner of the screen that say "Run App". Clicking on this will also run a local version of the app on your computer. 
+Once you have run all of the code, you can just run this third function `shinyApp(ui, server)` to display a local version of the app. 
+Alternatively, if you are using RStudio, there will be a button in the top-right corner of the screen that says "Run App". Clicking on this will also run a local version of the app on your computer. 
 
 If this code doesn't work, you may need to change the working directory of your R instance. Make sure that the working directory is the Shiny App folder from this repo so that it reads the data properly.
 
