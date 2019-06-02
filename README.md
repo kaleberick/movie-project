@@ -8,7 +8,7 @@ This app takes a user inputted movie budget, the widest release of a movie, the 
 It was created using the top weekly films from Box Office Mojo.
 
 
-The data folder contains all of the code and instructions on how to re-create the movie_dataset.csv file. 
+The data folder contains all of the code and instructions on how to recreate the movie_dataset.csv file. 
 All of the data used in this app were pulled from boxofficemojo.com using code from this file. 
 This folder also contains an R script that reviews all of the exploratory data analysis and modeling involved in creating the app.
 
