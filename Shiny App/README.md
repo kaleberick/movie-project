@@ -1,8 +1,8 @@
-### Shiny App Instructions
+# Shiny App Instructions
 
 There are two R files here. The first and most relevant is called "app.R". 
 
-## Running the Shiny App Locally
+### Running the Shiny App Locally
 This file contains all of the code necessary to create the Shiny App, which can be found [here](https://kalebe.shinyapps.io/Box-Office-Predictions/).
 You will need to install the shiny package on your computer in order for this script to work. 
 You can do so with the following code in R: install.packages("shiny").
@@ -21,14 +21,14 @@ Alternatively, if you are using RStudio, there will be a button in the top-right
 If this code doesn't work, you may need to change the working directory of your R instance. Make sure that the working directory is the Shiny App folder from this repo so that it reads the data properly.
 
 
-## Deploying Your Own Version of the App
+### Deploying Your Own Version of the App
 The second file is called "shiny permissions.R". This app gives simple instructions for how to deploy your own version of this app to the cloud using Shiny. 
 You will need to create your own Shiny account, which can be done [here](https://shinyapps.io). 
 Once you create an account, you will need your account name, your account token, and the secret token. 
 You will also need to install the rsconnect package, which can be done with the following code: install.packages("rsconnect").
 The comments in the script contain further insctructions for how to complete this. 
 
-## Movie Dataset
+### Movie Dataset
 The movie_dataset.csv file contains the final dataset used for calculating the model. It can be recreated with code from the Data file in this repo.
 The model used in the app was the result of several model iterations, which can also be found in the Data file. 
 

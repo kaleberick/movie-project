@@ -1,4 +1,4 @@
-### Shiny App - Box Office Predictions - 418
+# Shiny App - Box Office Predictions - 418
 
 This repo contains R code used to scrape movie data from Box Office Mojo and then create a model to estimate domestic box office earnings.
 

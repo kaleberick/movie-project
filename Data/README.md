@@ -1,8 +1,8 @@
-### Data
+## Data
 
 You will find two R files here. 
 
-## Webscraping
+### Webscraping
 The first is called "webscraping.R" and it contains all of the code used to gather the movie data in this repo. 
 All of the data was scraped from [boxofficemojo.com] (boxofficemojo.com). 
 
@@ -12,7 +12,7 @@ Unfortunately, these functions are not perfect and some movies will be missing i
 
 You can find comments in the code that give additional inscructions on how these functions work.
 
-## Data Exploration
+### Data Exploration
 The second R file is called "data analysis.R". This file contains all of the code used to explore the movie data, after it was collected. 
 This consists of data summaries, plots, and histograms to get a better understanding of how to model this data properly. 
 It also explores some variable transformations that helped improve the model.
