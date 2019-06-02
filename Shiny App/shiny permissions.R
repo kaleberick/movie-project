@@ -8,5 +8,5 @@ rsconnect::setAccountInfo(name='<your-name>', token='<your-token>', secret='<you
 # The code below deploys the shiny app to the cloud for other users to access it. 
 # If you are trying to deploy your own version of this app, make sure to input the correct 
 #     path on your computer to the location of the shiny app file. 
-rsconnect::deployApp("<you-file-path>/shiny")
+rsconnect::deployApp("<you-file-path>/Shiny App")
 
