@@ -1,5 +1,8 @@
 # Shiny App Instructions
 
+If you are trying to recreate this app on your own, you will need to run the code in the Data directory first to collect all of the necessary data. 
+Once you have done that, you can use the code in this directory to compile the completed app.
+
 There are two R files here. The first and most relevant is called "app.R". 
 
 ### Running the Shiny App Locally
